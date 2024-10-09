@@ -7,14 +7,14 @@ Lawyer::Lawyer()
 	name = nullptr;
 	age = 0;
 	company = nullptr;
-	finishedUniversity = false;
+	attendedCourt = false;
 }
 
-Lawyer::Lawyer(const char* n, int a, const char* comp, bool finish) : Human(n, a)
+Lawyer::Lawyer(const char* n, int a, const char* comp, bool attended) : Human(n, a)
 {
 	company = new char[strlen(comp) + 1];
 	strcpy_s(company, strlen(comp) + 1, comp);
-	finishedUniversity = finish;
+	attendedCourt = attended;
 }
 
 Lawyer::~Lawyer()
@@ -26,10 +26,10 @@ void Lawyer::Output()
 {
 	Human::Output();
 	cout << "Company: " << company << endl;
-	cout << "Finished University: " << finishedUniversity << endl << endl;
+	cout << "Attended court: " << attendedCourt << endl << endl;
 }
 
-void Lawyer::Input(const char* n, int a, const char* comp, bool finish)
+void Lawyer::Input(const char* n, int a, const char* comp, bool attended)
 {
 	if (name != nullptr)
 	{
@@ -46,5 +46,5 @@ void Lawyer::Input(const char* n, int a, const char* comp, bool finish)
 
 	company = new char[strlen(comp) + 1];
 	strcpy_s(company, strlen(comp) + 1, comp);
-	finishedUniversity = finish;
+	attendedCourt = attended;
 }
