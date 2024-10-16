@@ -15,11 +15,15 @@ Human::Human(const char* Name, int Age)
 	strcpy_s(name, strlen(Name) + 1, Name);
 	age = Age;
 }
-void Human::Output()
+void Human::Print()
 {
 	cout << "Output Human\n";
 	cout << "Name: " << name << endl
 		<< "Age: " << age << endl;
+}
+void Human::Salary()
+{
+	cout << "Salary: 0 :(" << endl;
 }
 void Human::Input() // ввод с клавиатуры
 {

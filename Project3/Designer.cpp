@@ -8,15 +8,17 @@ Designer::Designer()
 	age = 0;
 	mainProgram = nullptr;
 	politicalViews = nullptr;
+	salary = 0.0;
 }
 
-Designer::Designer(const char* n, int a, const char* program, const char* polit) : Human(n, a)
+Designer::Designer(const char* n, int a, const char* program, const char* polit, double sal) : Human(n, a)
 {
 	mainProgram = new char[strlen(program) + 1];
 	strcpy_s(mainProgram, strlen(program) + 1, program);
 
 	politicalViews = new char[strlen(polit) + 1];
 	strcpy_s(politicalViews, strlen(polit) + 1, polit);
+	salary = sal;
 }
 
 Designer::~Designer()
@@ -25,14 +27,19 @@ Designer::~Designer()
 	delete[] politicalViews;
 }
 
-void Designer::Output()
+void Designer::Print()
 {
-	Human::Output();
+	Human::Print();
 	cout << "Main program: " << mainProgram << endl;
-	cout << "Political views: " << politicalViews << endl << endl;
+	cout << "Political views: " << politicalViews << endl;
 }
 
-void Designer::Input(const char* n, int a, const char* program, const char* polit)
+void Designer::Salary()
+{
+	cout << "Salary: " << salary << endl;
+}
+
+void Designer::Input(const char* n, int a, const char* program, const char* polit, double sal)
 {
 	if (name != nullptr)
 	{
@@ -56,4 +63,5 @@ void Designer::Input(const char* n, int a, const char* program, const char* poli
 
 	politicalViews = new char[strlen(polit) + 1];
 	strcpy_s(politicalViews, strlen(polit) + 1, polit);
+	salary = sal;
 }

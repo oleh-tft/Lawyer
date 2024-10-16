@@ -4,12 +4,14 @@ class Director : public Human
 {
 	char* company;
 	int weekWorkHours;
+	double salary;
 
 public:
 	Director();
-	Director(const char* n, int a, const char* com, int hours);
+	Director(const char* n, int a, const char* com, int hours, double sal);
 	~Director();
-	void Output();
-	void Input(const char* n, int a, const char* com, int hours);
+	void Print();
+	void Salary();
+	void Input(const char* n, int a, const char* com, int hours, double sal);
 };
 

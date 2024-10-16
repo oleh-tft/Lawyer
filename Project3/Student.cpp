@@ -23,12 +23,16 @@ Student::~Student()
 	delete[] Univer;
 	cout << "Destruct Student\n";
 }
-void Student::Output()
+void Student::Print()
 {
 	cout << "Output Student\n";
-	Human::Output();
+	Human::Print();
 	cout << "University: " << Univer << endl
-		<< "Scholarship: " << Scholarship << endl << endl;
+		<< "Scholarship: " << Scholarship << endl;
+}
+void Student::Salary()
+{
+	cout << "Scholarship: " << Scholarship << endl;
 }
 void Student::Input(const char* n, int a, const char* U, double S)
 {

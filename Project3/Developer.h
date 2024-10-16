@@ -4,13 +4,15 @@ class Developer : public Human
 {
 	char* mainLanguage;
 	bool employed;
+	double salary;
 
 public:
 	Developer();
-	Developer(const char* n, int a, const char* lang, bool empl);
+	Developer(const char* n, int a, const char* lang, bool empl, double sal);
 	~Developer();
-	void Output();
-	void Input(const char* n, int a, const char* lang, bool empl);
+	void Print();
+	void Salary();
+	void Input(const char* n, int a, const char* lang, bool empl, double sal);
 
 };
 

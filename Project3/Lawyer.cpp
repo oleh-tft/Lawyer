@@ -8,13 +8,15 @@ Lawyer::Lawyer()
 	age = 0;
 	company = nullptr;
 	attendedCourt = false;
+	salary = 0.0;
 }
 
-Lawyer::Lawyer(const char* n, int a, const char* comp, bool attended) : Human(n, a)
+Lawyer::Lawyer(const char* n, int a, const char* comp, bool attended, double sal) : Human(n, a)
 {
 	company = new char[strlen(comp) + 1];
 	strcpy_s(company, strlen(comp) + 1, comp);
 	attendedCourt = attended;
+	salary = sal;
 }
 
 Lawyer::~Lawyer()
@@ -22,14 +24,19 @@ Lawyer::~Lawyer()
 	delete[] company;
 }
 
-void Lawyer::Output()
+void Lawyer::Print()
 {
-	Human::Output();
+	Human::Print();
 	cout << "Company: " << company << endl;
-	cout << "Attended court: " << attendedCourt << endl << endl;
+	cout << "Attended court: " << attendedCourt << endl;
 }
 
-void Lawyer::Input(const char* n, int a, const char* comp, bool attended)
+void Lawyer::Salary()
+{
+	cout << "Salary: " << salary << endl;
+}
+
+void Lawyer::Input(const char* n, int a, const char* comp, bool attended, double sal)
 {
 	if (name != nullptr)
 	{
@@ -47,4 +54,5 @@ void Lawyer::Input(const char* n, int a, const char* comp, bool attended)
 	company = new char[strlen(comp) + 1];
 	strcpy_s(company, strlen(comp) + 1, comp);
 	attendedCourt = attended;
+	salary = sal;
 }

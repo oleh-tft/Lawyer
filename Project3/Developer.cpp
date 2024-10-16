@@ -8,13 +8,15 @@ Developer::Developer()
 	age = 0;
 	mainLanguage = nullptr;
 	employed = false;
+	salary = 0.0;
 }
 
-Developer::Developer(const char* n, int a, const char* lang, bool empl) : Human(n, a)
+Developer::Developer(const char* n, int a, const char* lang, bool empl, double sal) : Human(n, a)
 {
 	mainLanguage = new char[strlen(lang) + 1];
 	strcpy_s(mainLanguage, strlen(lang) + 1, lang);
 	employed = empl;
+	salary = sal;
 }
 
 Developer::~Developer()
@@ -22,14 +24,19 @@ Developer::~Developer()
 	delete[] mainLanguage;
 }
 
-void Developer::Output()
+void Developer::Print()
 {
-	Human::Output();
+	Human::Print();
 	cout << "Main Language: " << mainLanguage << endl;
-	cout << "Currently employed: " << employed << endl << endl;
+	cout << "Currently employed: " << employed << endl;
 }
 
-void Developer::Input(const char* n, int a, const char* lang, bool empl)
+void Developer::Salary()
+{
+	cout << "Salary: " << salary << endl;
+}
+
+void Developer::Input(const char* n, int a, const char* lang, bool empl, double sal)
 {
 	if (name != nullptr)
 	{
@@ -47,4 +54,5 @@ void Developer::Input(const char* n, int a, const char* lang, bool empl)
 	mainLanguage = new char[strlen(lang) + 1];
 	strcpy_s(mainLanguage, strlen(lang) + 1, lang);
 	employed = empl;
+	salary = sal;
 }

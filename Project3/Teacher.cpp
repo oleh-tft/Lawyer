@@ -22,11 +22,15 @@ Teacher::~Teacher()
     delete[] university;
 }
 
-void Teacher::Output()
+void Teacher::Print()
 {
-    Human::Output();
+    Human::Print();
     cout << "University: " << university << endl;
-    cout << "Salary: " << salary << endl << endl;
+}
+
+void Teacher::Salary()
+{
+    cout << "Salary: " << salary << endl;
 }
 
 void Teacher::Input(const char* n, int a, const char* univ, double sal)

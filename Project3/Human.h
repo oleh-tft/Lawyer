@@ -6,9 +6,10 @@ protected:
 	int age;
 public:
 	Human();
-	Human(const char*, int);
-	void Output();
+	Human(const char* Name, int Age);
+	~Human();
+	virtual void Print();
+	virtual void Salary();
 	void Input();
 
-	~Human();
 };

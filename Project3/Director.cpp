@@ -8,13 +8,15 @@ Director::Director()
 	age = 0;
 	company = nullptr;
 	weekWorkHours = 0;
+	salary = 0.0;
 }
 
-Director::Director(const char* n, int a, const char* com, int hours) : Human(n, a)
+Director::Director(const char* n, int a, const char* com, int hours, double sal) : Human(n, a)
 {
 	company = new char[strlen(com) + 1];
 	strcpy_s(company, strlen(com) + 1, com);
 	weekWorkHours = hours;
+	salary = sal;
 }
 
 Director::~Director()
@@ -22,14 +24,19 @@ Director::~Director()
 	delete[] company;
 }
 
-void Director::Output()
+void Director::Print()
 {
-	Human::Output();
+	Human::Print();
 	cout << "Company: " << company << endl;
-	cout << "Week work hours amount: " << weekWorkHours << endl << endl;
+	cout << "Week work hours amount: " << weekWorkHours << endl;
 }
 
-void Director::Input(const char* n, int a, const char* com, int hours)
+void Director::Salary()
+{
+	cout << "Salary: " << salary << endl;
+}
+
+void Director::Input(const char* n, int a, const char* com, int hours, double sal)
 {
 	if (name != nullptr)
 	{
@@ -47,4 +54,5 @@ void Director::Input(const char* n, int a, const char* com, int hours)
 	company = new char[strlen(com) + 1];
 	strcpy_s(company, strlen(com) + 1, com);
 	weekWorkHours = hours;
+	salary = sal;
 }
