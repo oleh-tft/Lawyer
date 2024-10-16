@@ -26,51 +26,48 @@ int main()
 	{
 	case 1:
 		human = new Student("Oleg", 19, "Itstep", 2000);
-		human->Print();
 		break;
 	case 2:
 		human = new Student("Oleg", 19, "Itstep", 2000);
-		human->Salary();
 		break;
 	case 3:
 		human = new Lawyer("Daria", 21, "Custom", false, 40000.0);
-		human->Print();
 		break;
 	case 4:
 		human = new Lawyer("Daria", 21, "Custom", false, 40000.0);
-		human->Salary();
 		break;
 	case 5:
 		human = new Teacher("Mark", 42, "Philosophy", 38999.50);
-		human->Print();
 		break;
 	case 6:
 		human = new Teacher("Mark", 42, "Philosophy", 38999.50);
-		human->Salary();
 		break;
 	case 7:
 		human = new Developer("Oleh", 22, "Java, C++", false, 999500.0);
-		human->Print();
 		break;
 	case 8:
 		human = new Developer("Oleh", 22, "Java, C++", false, 999500.0);
-		human->Salary();
 		break;
 	case 9:
 		human = new Designer("Yan", 20, "Blender", "Moderate", 250000.0);
-		human->Print();
 		break;
 	case 10:
 		human = new Designer("Yan", 20, "Blender", "Moderate", 250000.0);
-		human->Salary();
 		break;
 	case 11:
 		human = new Director("Mary", 30, "Cool company", 40, 180909.0);
-		human->Print();
 		break;
 	case 12:
 		human = new Director("Mary", 30, "Cool company", 40, 180909.0);
-		human->Salary();
 		break;
+	}
+
+	if (pick % 2 != 0)
+	{
+		human->Print();
+	}
+	else
+	{
+		human->Salary();
 	}
 }
