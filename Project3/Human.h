@@ -8,8 +8,8 @@ public:
 	Human();
 	Human(const char* Name, int Age);
 	~Human();
-	virtual void Print();
-	virtual void Salary();
+	virtual void Print() = 0;
+	virtual void Salary() = 0;
 	void Input();
 
 };

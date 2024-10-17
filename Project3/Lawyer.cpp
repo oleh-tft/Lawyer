@@ -26,7 +26,7 @@ Lawyer::~Lawyer()
 
 void Lawyer::Print()
 {
-	Human::Print();
+	cout << "Name: " << name << endl << "Age: " << age << endl;
 	cout << "Company: " << company << endl;
 	cout << "Attended court: " << attendedCourt << endl;
 }

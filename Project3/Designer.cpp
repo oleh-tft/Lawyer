@@ -29,7 +29,7 @@ Designer::~Designer()
 
 void Designer::Print()
 {
-	Human::Print();
+	cout << "Name: " << name << endl << "Age: " << age << endl;
 	cout << "Main program: " << mainProgram << endl;
 	cout << "Political views: " << politicalViews << endl;
 }

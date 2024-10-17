@@ -8,7 +8,7 @@
 #include "Director.h"
 using namespace std;
 
-int main()
+void Choose()
 {
 	Human* human = nullptr;
 	int pick = 0;
@@ -58,5 +58,27 @@ int main()
 	case 2:
 		human->Salary();
 		break;
+	}
+
+	delete human;
+}
+
+int main()
+{
+	Human* arr[6] {
+		new Student("Oleg", 19, "Itstep", 2000),
+		new Lawyer("Daria", 21, "Custom", false, 40000.0),
+		new Teacher("Mark", 42, "Philosophy", 38999.50),
+		new Developer("Oleh", 22, "Java, C++", false, 999500.0),
+		new Designer("Yan", 20, "Blender", "Moderate", 250000.0),
+		new Director("Mary", 30, "Cool company", 40, 180909.0)
+	};
+
+	for (int i = 0; i < 6; i++)
+	{
+		arr[i]->Print();
+		arr[i]->Salary();
+		cout << endl;
+		delete arr[i];
 	}
 }

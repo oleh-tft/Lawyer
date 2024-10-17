@@ -4,7 +4,6 @@ using namespace std;
 
 Student::Student()
 {
-	cout << "Construct Student\n";
 	name = nullptr;
 	age = 12;
 	Univer = nullptr;
@@ -13,7 +12,6 @@ Student::Student()
 }
 Student::Student(const char* n, int a, const char* U, double S) :Human(n, a)
 {
-	cout << "Construct Student\n";
 	Scholarship = S;
 	Univer = new char[strlen(U) + 1];
 	strcpy_s(Univer, strlen(U) + 1, U);
@@ -21,12 +19,10 @@ Student::Student(const char* n, int a, const char* U, double S) :Human(n, a)
 Student::~Student()
 {
 	delete[] Univer;
-	cout << "Destruct Student\n";
 }
 void Student::Print()
 {
-	cout << "Output Student\n";
-	Human::Print();
+	cout << "Name: " << name << endl << "Age: " << age << endl;
 	cout << "University: " << Univer << endl
 		<< "Scholarship: " << Scholarship << endl;
 }

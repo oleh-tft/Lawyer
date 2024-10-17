@@ -26,7 +26,7 @@ Director::~Director()
 
 void Director::Print()
 {
-	Human::Print();
+	cout << "Name: " << name << endl << "Age: " << age << endl;
 	cout << "Company: " << company << endl;
 	cout << "Week work hours amount: " << weekWorkHours << endl;
 }

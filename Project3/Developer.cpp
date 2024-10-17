@@ -26,7 +26,7 @@ Developer::~Developer()
 
 void Developer::Print()
 {
-	Human::Print();
+	cout << "Name: " << name << endl << "Age: " << age << endl;
 	cout << "Main Language: " << mainLanguage << endl;
 	cout << "Currently employed: " << employed << endl;
 }

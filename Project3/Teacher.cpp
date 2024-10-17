@@ -24,7 +24,7 @@ Teacher::~Teacher()
 
 void Teacher::Print()
 {
-    Human::Print();
+    cout << "Name: " << name << endl << "Age: " << age << endl;
     cout << "University: " << university << endl;
 }
 

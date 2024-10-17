@@ -4,26 +4,14 @@ using namespace std;
 
 Human::Human()
 {
-	cout << "Construct Human\n";
 	name = nullptr;
 	age = 0;
 }
 Human::Human(const char* Name, int Age)
 {
-	cout << "Construct Human\n";
 	name = new char[strlen(Name) + 1];
 	strcpy_s(name, strlen(Name) + 1, Name);
 	age = Age;
-}
-void Human::Print()
-{
-	cout << "Output Human\n";
-	cout << "Name: " << name << endl
-		<< "Age: " << age << endl;
-}
-void Human::Salary()
-{
-	cout << "Salary: 0 :(" << endl;
 }
 void Human::Input() // ввод с клавиатуры
 {
@@ -43,5 +31,4 @@ void Human::Input() // ввод с клавиатуры
 Human::~Human()
 {
 	delete[] name;
-	cout << "Destruct Human\n";
 }
