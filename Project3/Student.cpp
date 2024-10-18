@@ -18,6 +18,7 @@ Student::Student(const char* n, int a, const char* U, double S) :Human(n, a)
 }
 Student::~Student()
 {
+	cout << "Destruct Student" << endl;
 	delete[] Univer;
 }
 void Student::Print()

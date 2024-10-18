@@ -63,9 +63,9 @@ void Choose()
 	delete human;
 }
 
-int main()
+void HumanArray()
 {
-	Human* arr[6] {
+	Human* arr[6]{
 		new Student("Oleg", 19, "Itstep", 2000),
 		new Lawyer("Daria", 21, "Custom", false, 40000.0),
 		new Teacher("Mark", 42, "Philosophy", 38999.50),
@@ -81,4 +81,29 @@ int main()
 		cout << endl;
 		delete arr[i];
 	}
+}
+
+int main()
+{
+	int pick = 0;
+	Human* ptr = nullptr;
+	cout << "1. Student" << endl;
+	cout << "2. Teacher" << endl;
+	cout << "Choose: ";
+	cin >> pick;
+
+	switch (pick)
+	{
+	case 1:
+		ptr = new Student("Oleg", 19, "Itstep", 2000);
+		break;
+	case 2:
+		ptr = new Teacher("Mark", 42, "Philosophy", 38999.50);
+		break;
+	}
+
+	ptr->Print();
+	ptr->Salary();
+
+	delete ptr;
 }

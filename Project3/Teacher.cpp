@@ -19,6 +19,7 @@ Teacher::Teacher(const char* n, int a, const char* univ, double sal) : Human(n, 
 
 Teacher::~Teacher()
 {
+    cout << "Destruct Teacher" << endl;
     delete[] university;
 }
 

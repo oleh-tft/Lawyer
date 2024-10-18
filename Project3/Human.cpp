@@ -30,5 +30,6 @@ void Human::Input() // ввод с клавиатуры
 }
 Human::~Human()
 {
+	cout << "Destruct Human" << endl;
 	delete[] name;
 }
